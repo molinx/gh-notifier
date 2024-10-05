@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schema.tauri.app/config/2.0.0",
+  "productName": "Github Notifier",
+  "version": "0.1.0",
+  "identifier": "com.molinx.gh-notifier",
+  "mainBinaryName": "Github Notifier",
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [
+      {
+        "create": false,
+        "skipTaskbar": true,
+        "visible": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "build": {
+    "frontendDist": null
+  },
+  "bundle": {
+    "active": true,
+    "targets": "app",
+    "icon": ["icons/icons.icns"]
+  }
+}
