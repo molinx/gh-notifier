@@ -17,6 +17,9 @@ pub fn run() {
         .plugin(tauri_plugin_shell::init())
         .plugin(tauri_plugin_http::init())
         .setup(|app| {
+            // Hide from drawer
+            app.set_activation_policy(tauri::ActivationPolicy::Accessory);
+
             // Autostart
             app.handle()
                 .plugin(tauri_plugin_autostart::init(
